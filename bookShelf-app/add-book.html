@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book - Bookshelf App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </header>
+    <aside class="sidebar">
+      <h2>Bookshelf</h2>
+      <ul>
+        <li><a href="books.html">Home</a></li>
+        <li><a href="add-book.html">Add Book</a></li>
+        <li><a href="currently-reading.html">Currently Reading</a></li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <h2>Add Book</h2>
+      <form id="add-book-form">
+        <div class="form-group">
+          <label for="book-title">Book Title</label>
+          <input type="text" id="book-title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="book-author">Author</label>
+          <input type="text" id="book-author" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="book-status">Status</label>
+          <select id="book-status" name="status" required>
+            <option value="To Read">To Read</option>
+            <option value="Currently Reading">Currently Reading</option>
+            <option value="Read">Read</option>
+          </select>
+        </div>
+        <button type="submit">Add Book</button>
+      </form>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
