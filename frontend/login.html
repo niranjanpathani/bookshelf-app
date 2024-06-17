@@ -7,34 +7,56 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
     }
     .container {
-      margin-top: 100px;
       max-width: 400px;
-      background: rgba(255, 255, 255, 0.9);
+      margin: 100px auto;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .btn-login {
+      width: 100%;
     }
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bookshelf App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
-    <h2 class="text-center">Login</h2>
+    <h2>Login</h2>
     <form id="login-form">
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" required>
+        <input type="email" class="form-control" id="email" placeholder="Email" required>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" required>
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Login</button>
+      <button type="submit" class="btn btn-primary btn-login">Login</button>
     </form>
     <p class="text-center mt-3">
       Don't have an account? <a href="signup.html">Sign up</a>
@@ -44,13 +66,13 @@
   <script>
     document.getElementById('login-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      
-      // Simulate successful login
-      alert('Login successful!');
-      window.location.href = 'books.html';
+      alert('Login form submitted!');
+      // Your login logic here
     });
   </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
